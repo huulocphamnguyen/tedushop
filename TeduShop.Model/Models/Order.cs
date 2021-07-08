@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TeduShop.Model.Models
 {
@@ -42,6 +39,11 @@ namespace TeduShop.Model.Models
         public string CreatedBy { set; get; }
         public string PaymentStatus { set; get; }
         public bool Status { set; get; }
+
+        [StringLength(128)]
+        [Column(TypeName = "nvarchar")]
+        public string CustomerId { set; get; }
+
 
         public virtual IEnumerable<OrderDetail> OrderDetails { set; get; }
     }

@@ -1,10 +1,7 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TeduShop.Model.Models
 {
@@ -12,10 +9,13 @@ namespace TeduShop.Model.Models
     public class MenuGroup
     {
         [Key]
-        public int ID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { set; get; }
+
         [Required]
         [MaxLength(50)]
-        public string Name { get; set; }
-        public virtual IEnumerable<Menu> Menus { get; set; }
+        public string Name { set; get; }
+
+        public virtual IEnumerable<Menu> Menus { set; get; }
     }
 }
