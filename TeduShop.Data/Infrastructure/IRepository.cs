@@ -15,6 +15,8 @@ namespace TeduShop.Data.Infrastructure
         // Marks an entity to be removed
         void Delete(T entity);
 
+        void Delete(int id);
+
         //Delete multi records
         void DeleteMulti(Expression<Func<T, bool>> where);
 
@@ -28,6 +30,7 @@ namespace TeduShop.Data.Infrastructure
         IQueryable<T> GetMulti(Expression<Func<T, bool>> predicate, string[] includes = null);
 
         IQueryable<T> GetMultiPaging(Expression<Func<T, bool>> filter, out int total, int index = 0, int size = 50, string[] includes = null);
+        
 
         int Count(Expression<Func<T, bool>> where);
 
