@@ -10,7 +10,7 @@ namespace TeduShop.Service
         void Add(PostCategory postCategory);
 
         void Delete(int Id);
-
+         
         void Update(PostCategory postCategory);
 
         IEnumerable<PostCategory> GetAll();
