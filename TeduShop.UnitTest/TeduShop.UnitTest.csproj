@@ -20,7 +20,6 @@
     <ProjectReference Include="..\TeduShop.Data\TeduShop.Data.csproj" />
     <ProjectReference Include="..\TeduShop.Model\TeduShop.Model.csproj" />
     <ProjectReference Include="..\TeduShop.Service\TeduShop.Service.csproj" />
-    <ProjectReference Include="..\TeduShop.Web\TeduShop.Web.csproj" />
   </ItemGroup>
 
 </Project>
