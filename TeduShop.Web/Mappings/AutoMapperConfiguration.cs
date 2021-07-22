@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using AutoMapper;
+using TeduShop.Model.Models;
+using TeduShop.Web.Models;
 
 namespace TeduShop.Web.Mappings
 {
@@ -9,7 +8,17 @@ namespace TeduShop.Web.Mappings
     {
         public static void Configure()
         {
-
+            //var config = new MapperConfiguration(cfg =>
+            //{
+            //    cfg.CreateMap<Post, PostViewModel>();
+            //    cfg.CreateMap<PostCategory, PostCategoryViewModel>();
+            //    cfg.CreateMap<Tag, TagViewModel>();
+            //    cfg.CreateMap<PostTag, PostTagViewModel>();
+            //});
+            Mapper.CreateMap<Post, PostViewModel>();
+            Mapper.CreateMap<PostCategory, PostCategoryViewModel>();
+            Mapper.CreateMap<Tag, TagViewModel>();
+            //var mapper = config.CreateMapper();
         }
     }
 }
